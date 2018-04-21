@@ -1,19 +1,19 @@
-/* eslint-disable import/no-named-as-default */
-import React from 'react';
+import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { Switch, NavLink, Route, Link } from 'react-router-dom';
-import HomePage from './HomePage';
-import FuelSavingsPage from './containers/FuelSavingsPage';
-import AboutPage from './AboutPage';
-import NotFoundPage from './NotFoundPage';
-import Home from '../containers/Home';
+// import HomePage from './HomePage';
+// import FuelSavingsPage from './containers/FuelSavingsPage';
+// import AboutPage from './AboutPage';
+// import NotFoundPage from './NotFoundPage';
+// import Home from '../containers/Home';
 import { Sidebar, Segment, Button, Menu, Image, Icon, Header,  Container  } from 'semantic-ui-react'
+import AppNavigation from "../Navigation/AppNavigation";
 // import { Link } from 'react-router'
 // This is a class-based component because the current
 // version of hot reloading won't hot reload a stateless
 // component at the top-level.
 
-class App extends React.Component {
+class App extends Component {
 
   componentDidUpdate(){
     console.log(this.props.history.location.pathname);
@@ -42,14 +42,7 @@ class App extends React.Component {
 
         <Container >
 
-            {/* Routes */}
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route path="/fuel-savings" component={FuelSavingsPage} />
-              <Route path="/about" component={AboutPage} />
-              <Route path="/home2" component={Home} />
-              <Route component={NotFoundPage} />
-            </Switch>
+        <AppNavigation/>
 
 
         </Container>
