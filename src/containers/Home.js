@@ -1,32 +1,33 @@
 import React, { Component } from 'react'
 
+import {connect} from 'react-redux';
+import {readNote, resetNoteData}  from '../actions/exampleActions';
+
 class Home extends Component {
+
+  componentDidMount(){
+    // Reseting redux's noteData UID so history navigation won't cause issues
+    // this.props.resetNoteData();
+    console.log(this.props);
+    console.log(2121);
+    this.openNote();
+  }
+
+  componentDidUpdate(){
+    // this.redirectIfDelete();
+    console.log(this.props);
+  }
+
+  openNote = () => {
+    // this.setState({ noteOpened: true });
+    this.props.readNote(12);
+  };
 
   constructor(props){
     super(props)
   }
 
-  componentDidMount(){
-    // // Checking if still logged in
-    // storage.load({
-    //   key: 'user',
-    //   autoSync: true,
-    //   syncInBackground: true,
-    //   syncParams: {
-    //     extraFetchOptions: {},
-    //     someFlag: true,
-    //   },
-    // }).then(data => {
-    //   // User logged in
-    // }) .catch(err => {
-    //   // User not logged in
-    //   redirectLogin(this.props.navigation, null)
-    // })
 
-  }
-
-  componentDidUpdate() {
-  }
 
   componentWillReceiveProps(newProps){
 
@@ -40,7 +41,18 @@ class Home extends Component {
   }
 }
 
-export default Home;
+// export default Home;
+
+const mapDispatchToProps = {
+  readNote,resetNoteData
+};
+
+const mapStateToProps = (state) => ({
+  data : state.note
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
+
 
 // const mapStateToProps = (state) => {
 //   return {

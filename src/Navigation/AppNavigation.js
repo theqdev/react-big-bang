@@ -12,10 +12,10 @@ class AppNavigation extends Component {
   return(
 
     <Switch>
-      <Route exact path="/" component={HomePage}/>
+      <Route exact path="/" component={Home}/>
       {/*<Route path="/fuel-savings" component={FuelSavingsPage}/>*/}
       {/*<Route path="/about" component={AboutPage}/>*/}
-      <Route path="/home2" component={Home}/>
+      {/*<Route path="/home2" component={Home}/>*/}
       <Route component={NotFoundPage}/>
     </Switch>
 
