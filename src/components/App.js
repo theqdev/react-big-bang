@@ -7,7 +7,7 @@ import { Switch, NavLink, Route, Link } from 'react-router-dom';
 // import NotFoundPage from './NotFoundPage';
 // import Home from '../containers/Home';
 import { Sidebar, Segment, Button, Menu, Image, Icon, Header,  Container  } from 'semantic-ui-react'
-import AppNavigation from "../Navigation/AppNavigation";
+import AppNavigation from "../navigation/AppNavigation";
 // import { Link } from 'react-router'
 // This is a class-based component because the current
 // version of hot reloading won't hot reload a stateless
@@ -33,9 +33,10 @@ class App extends Component {
           </div>
 
             <Link className={this.props.history.location.pathname == '/' ? "item active" : "item"} to="/">Home</Link>
-            <Link className={this.props.history.location.pathname == '/fuel-savings' ? "item active" : "item"} to="/fuel-savings">Demo App</Link>
-            <Link className={this.props.history.location.pathname == '/about' ? "item active" : "item"} to="/about" >About</Link>
-            <Link className={this.props.history.location.pathname == '/about' ? "item active" : "item"} to="/about" >Home 2</Link>
+            <Link className={this.props.history.location.pathname == '/example' ? "item active" : "item"} to="/example">Example</Link>
+            {/*<Link className={this.props.history.location.pathname == '/fuel-savings' ? "item active" : "item"} to="/fuel-savings">Demo App</Link>*/}
+            {/*<Link className={this.props.history.location.pathname == '/about' ? "item active" : "item"} to="/about" >About</Link>*/}
+            {/*<Link className={this.props.history.location.pathname == '/about' ? "item active" : "item"} to="/about" >Home 2</Link>*/}
 
           </Container>
         </div>
