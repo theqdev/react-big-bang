@@ -1,70 +1,60 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import ExampleActions from '../Redux/Example'
 
-import {connect} from 'react-redux';
-import {readNote, resetNoteData}  from '../actions/exampleActions';
+
+import { Link } from 'react-router-dom';
 
 class Home extends Component {
 
   componentDidMount(){
-    // Reseting Redux's noteData UID so history navigation won't cause issues
-    // this.props.resetNoteData();
+
+    // alert(1);
     console.log(this.props);
-    console.log(2121);
-    this.openNote();
+    console.log(this.state);
+
+    this.props.getAPIData();
+
   }
+
 
   componentDidUpdate(){
-    // this.redirectIfDelete();
+
+    // alert(1);
     console.log(this.props);
-  }
-
-  openNote = () => {
-    // this.setState({ noteOpened: true });
-    this.props.readNote(12);
-  };
-
-  constructor(props){
-    super(props)
-  }
-
-
-
-  componentWillReceiveProps(newProps){
+    console.log(this.state);
+    // this.props.getAPIData();
 
   }
 
-  render () {
+  render(){
+    return(
+      <div>
+        <h1>home 1244</h1>
 
-    return (
-<p>sdsd</p>
+        <h2>Get Started</h2>
+        <ol>
+          <li>Review the <Link to="/fuel-savings">demo app</Link></li>
+          <li>Remove the demo and start coding: npm run remove-demo</li>
+        </ol>
+      </div>
     )
   }
+
+
 }
 
-// export default Home;
-
-const mapDispatchToProps = {
-  readNote,resetNoteData
+const mapStateToProps = (state) => {
+  return {
+    data: state.example,
+  }
 };
 
-const mapStateToProps = (state) => ({
-  data : state.note
-});
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getAPIData: (data) => dispatch(ExampleActions.exampleSet(data)),
+    // updateUserSettings: (data) => dispatch(UserActions.userSuccess(data)),
+  }
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
-
-
-// const mapStateToProps = (state) => {
-//   return {
-//     user: state.app.user,
-//     isFetching: state.app.fetching,
-//   }
-// };
-//
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     populateUserData: (data) => dispatch(UserActions.generalRequest(data)),
-//   }
-// };
-//
-// export default connect(mapStateToProps, mapDispatchToProps)(UserHome)
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

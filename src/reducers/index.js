@@ -1,19 +1,6 @@
-// import { combineReducers } from 'redux';
-// import { routerReducer } from 'react-router-Redux';
-// import example from './ExampleReducer';
-//
-//
-// const rootReducer = combineReducers({
-//   example,
-//   routing: routerReducer
-// });
-//
-// export default rootReducer;
-
 import {example as example} from '../Redux/Example';
-
 import { combineReducers } from 'redux'
-import configureStore from './CreateStore'
+import configureStore from '../store/CreateStore'
 import rootSaga from '../Sagas/index'
 
 export default () => {

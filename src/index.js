@@ -3,7 +3,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import configureStore, { history } from './store/configureStore';
+import { history } from './store/CreateStore';
 import createStore from './reducers'
 
 

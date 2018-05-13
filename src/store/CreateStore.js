@@ -6,6 +6,10 @@ import createSagaMiddleware from 'redux-saga'
 // import ReduxPersist from '../Config/ReduxPersist'
 // import ScreenTracking from './ScreenTrackingMiddleware'
 
+import createHistory from 'history/createBrowserHistory';
+export const history = createHistory();
+
+
 // creates the store
 export default (rootReducer, rootSaga) => {
   /* ------------- Redux Configuration ------------- */
@@ -37,6 +41,14 @@ export default (rootReducer, rootSaga) => {
   const createAppropriateStore = createStore
   const store = createAppropriateStore(rootReducer, compose(...enhancers))
 
+
+  //TODO: Add suppoirt for redux dev tools extension
+  // const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // add support for Redux dev tools
+  // const store = createStore(rootReducer, initialState, composeEnhancers(
+  //   applyMiddleware(...middlewares)
+  //   )
+  // );
+
   // configure persistStore and check reducer version number
   // if (ReduxPersist.active) {
   //   RehydrationServices.updateReducers(store)
@@ -44,6 +56,15 @@ export default (rootReducer, rootSaga) => {
 
   // kick off root saga
   sagaMiddleware.run(rootSaga)
+
+  // TODO: Makeit hot reload new director
+  if (module.hot) {
+    // Enable Webpack hot module replacement for reducers
+    module.hot.accept('../reducers', () => {
+      const nextReducer = require('../reducers/index').default; // eslint-disable-line global-require
+      store.replaceReducer(nextReducer);
+    });
+  }
 
   return store
 }
