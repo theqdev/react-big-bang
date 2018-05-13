@@ -1,5 +1,5 @@
 // import { combineReducers } from 'redux';
-// import { routerReducer } from 'react-router-redux';
+// import { routerReducer } from 'react-router-Redux';
 // import example from './ExampleReducer';
 //
 //
@@ -10,7 +10,7 @@
 //
 // export default rootReducer;
 
-
+import {example as example} from '../Redux/Example';
 
 import { combineReducers } from 'redux'
 import configureStore from './CreateStore'
@@ -20,7 +20,7 @@ export default () => {
   /* ------------- Assemble The Reducers ------------- */
   const rootReducer = combineReducers({
 
-    example: require('../redux/Example').reducer,
+    example:example,
     // app: require('./UserRedux').reducer,
     // users: require('./UsersRedux').reducer,
     // settings: require('./UserSettings').reducer,

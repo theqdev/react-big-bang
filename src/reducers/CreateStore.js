@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux'
-// import { autoRehydrate } from 'redux-persist'
+// import { autoRehydrate } from 'Redux-persist'
 // import Config from '../Config/DebugConfig'
 import createSagaMiddleware from 'redux-saga'
 // import RehydrationServices from '../Services/RehydrationServices'

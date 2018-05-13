@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import ExampleActions from '../redux/Example'
+import ExampleActions from '../Redux/Example'
 
 
 import { Link } from 'react-router-dom';
@@ -11,6 +11,8 @@ class Example extends Component {
 
     // alert(1);
     console.log(this.props);
+    console.log(this.state);
+
     this.props.getAPIData();
 
   }
@@ -44,7 +46,7 @@ class Example extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    data: state,
+    data: state.example,
   }
 };
 

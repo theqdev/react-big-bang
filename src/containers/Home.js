@@ -6,7 +6,7 @@ import {readNote, resetNoteData}  from '../actions/exampleActions';
 class Home extends Component {
 
   componentDidMount(){
-    // Reseting redux's noteData UID so history navigation won't cause issues
+    // Reseting Redux's noteData UID so history navigation won't cause issues
     // this.props.resetNoteData();
     console.log(this.props);
     console.log(2121);
