@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/about-page.css';
+import '../Styles/about-page.css';
 import { Button } from 'semantic-ui-react'
 // Since this component is simple and static, there's no parent container for it.
 const AboutPage = () => {

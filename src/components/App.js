@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { Switch, NavLink, Route, Link } from 'react-router-dom';
 // import HomePage from './HomePage';
-// import FuelSavingsPage from './containers/FuelSavingsPage';
+// import FuelSavingsPage from './Containers/FuelSavingsPage';
 // import AboutPage from './AboutPage';
 // import NotFoundPage from './NotFoundPage';
-// import Home from '../containers/Home';
+// import Home from '../Containers/Home';
 import { Sidebar, Segment, Button, Menu, Image, Icon, Header,  Container  } from 'semantic-ui-react'
-import AppNavigation from "../navigation/AppNavigation";
+import AppNavigation from "../Navigation/Routes";
 // import { Link } from 'react-router'
 // This is a class-based component because the current
 // version of hot reloading won't hot reload a stateless
