@@ -1,4 +1,4 @@
-import {example as example} from '../Redux/Example';
+import {example as example} from './Example';
 import { combineReducers } from 'redux'
 import configureStore from '../store/CreateStore'
 import rootSaga from '../Sagas/index'

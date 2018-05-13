@@ -1,10 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux'
-// import { autoRehydrate } from 'Redux-persist'
 // import Config from '../Config/DebugConfig'
 import createSagaMiddleware from 'redux-saga'
-// import RehydrationServices from '../Services/RehydrationServices'
-// import ReduxPersist from '../Config/ReduxPersist'
-// import ScreenTracking from './ScreenTrackingMiddleware'
 
 import createHistory from 'history/createBrowserHistory';
 export const history = createHistory();
@@ -61,7 +57,7 @@ export default (rootReducer, rootSaga) => {
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
     module.hot.accept('../reducers', () => {
-      const nextReducer = require('../reducers/index').default; // eslint-disable-line global-require
+      const nextReducer = require('../Redux/index').default; // eslint-disable-line global-require
       store.replaceReducer(nextReducer);
     });
   }

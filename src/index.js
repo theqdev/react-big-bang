@@ -4,15 +4,15 @@ import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { history } from './store/CreateStore';
-import createStore from './reducers'
+import createStore from './Redux/index'
 
 
 
-import Root from './components/Root';
+import Root from './Components/Root';
 
 // import 'semantic/dist/semantic.min.css';
 import 'semantic-ui-css/semantic.min.css';
-import './styles/styles.scss'; // Yep, that's right. You can import SASS/CSS files too! Webpack will run the associated loader and plug this into the page.
+import './Styles/styles.scss'; // Yep, that's right. You can import SASS/CSS files too! Webpack will run the associated loader and plug this into the page.
 require('./favicon.ico'); // Tell webpack to load favicon.ico
 // const store = configureStore();
 const store = createStore();
@@ -25,8 +25,8 @@ render(
 );
 
 if (module.hot) {
-  module.hot.accept('./components/Root', () => {
-    const NewRoot = require('./components/Root').default;
+  module.hot.accept('./Components/Root', () => {
+    const NewRoot = require('./Components/Root').default;
     render(
       <AppContainer>
         <NewRoot store={store} history={history} />

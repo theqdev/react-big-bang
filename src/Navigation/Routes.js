@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-import HomePage from '../components/HomePage';
-import NotFoundPage from '../components/NotFoundPage';
-import Home from '../containers/Home';
-import Example from '../containers/Example';
+import HomePage from '../Components/HomePage';
+import NotFoundPage from '../Components/NotFoundPage';
+import Home from '../Containers/Home';
+import Example from '../Containers/Example';
 import {Route, Switch} from "react-router-dom";
 
 
