@@ -15,6 +15,7 @@ export default Creators
 /* ------------- Initial State ------------- */
 
 export const INITIAL_STATE = Immutable({
+  test: 'kex',
   fetching: null,
   payload: null,
   error: null
@@ -36,7 +37,7 @@ export const failure = state =>
 
 /* ------------- Hookup Reducers To Types ------------- */
 
-export const reducer = createReducer(INITIAL_STATE, {
+export const example = createReducer(INITIAL_STATE, {
   [Types.EXAMPLE_SET]: set,
   [Types.EXAMPLE_SUCCESS]: success,
   [Types.EXAMPLE_FAILURE]: failure,
