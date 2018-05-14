@@ -1,7 +1,7 @@
 {
-  "name": "PUBG-Tracker",
+  "name": "Qdev's React JS Boilerplate",
   "version": "0.0.1",
-  "description": "PUBG-Tracker",
+  "description": "Qdev's React JS Boilerplate",
   "engines": {
     "npm": ">=3"
   },
