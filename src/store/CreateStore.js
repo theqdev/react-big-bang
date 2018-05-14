@@ -6,57 +6,35 @@ import createHistory from 'history/createBrowserHistory';
 export const history = createHistory();
 
 
-// creates the store
+// creates the Store
 export default (rootReducer, rootSaga) => {
   /* ------------- Redux Configuration ------------- */
 
   const middleware = []
   const enhancers = []
 
-  /* ------------- Analytics Middleware ------------- */
-  // middleware.push(ScreenTracking)
 
   /* ------------- Saga Middleware ------------- */
-
   const sagaMonitor =  null
   const sagaMiddleware = createSagaMiddleware({ sagaMonitor })
   middleware.push(sagaMiddleware)
 
   /* ------------- Assemble Middleware ------------- */
-
   enhancers.push(applyMiddleware(...middleware))
 
-  /* ------------- AutoRehydrate Enhancer ------------- */
+  alert(process.env.NODE_ENV);
 
-  // add the autoRehydrate enhancer
-  // if (ReduxPersist.active) {
-  //   enhancers.push(autoRehydrate())
-  // }
-
-  // if Reactotron is enabled (default for __DEV__), we'll create the store through Reactotron
-  const createAppropriateStore = createStore
-  const store = createAppropriateStore(rootReducer, compose(...enhancers))
-
-
-  //TODO: Add suppoirt for redux dev tools extension
-  // const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // add support for Redux dev tools
-  // const store = createStore(rootReducer, initialState, composeEnhancers(
-  //   applyMiddleware(...middlewares)
-  //   )
-  // );
-
-  // configure persistStore and check reducer version number
-  // if (ReduxPersist.active) {
-  //   RehydrationServices.updateReducers(store)
-  // }
+  // if Reactotron is enabled (default for __DEV__), we'll create the Store through Reactotron
+  const createAppropriateStore =  createStore
+  const composeMethod = process.env.NODE_ENV === 'production' ? compose : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+  const store = createAppropriateStore(rootReducer, composeMethod(...enhancers))
 
   // kick off root saga
   sagaMiddleware.run(rootSaga)
 
-  // TODO: Makeit hot reload new director
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
-    module.hot.accept('../reducers', () => {
+    module.hot.accept('../Redux', () => {
       const nextReducer = require('../Redux/index').default; // eslint-disable-line global-require
       store.replaceReducer(nextReducer);
     });
