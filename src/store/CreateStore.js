@@ -22,8 +22,6 @@ export default (rootReducer, rootSaga) => {
   /* ------------- Assemble Middleware ------------- */
   enhancers.push(applyMiddleware(...middleware))
 
-  alert(process.env.NODE_ENV);
-
   // if Reactotron is enabled (default for __DEV__), we'll create the Store through Reactotron
   const createAppropriateStore =  createStore
   const composeMethod = process.env.NODE_ENV === 'production' ? compose : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__

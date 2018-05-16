@@ -1,7 +1,7 @@
 {
-  "name": "Qdev's React JS Boilerplate",
+  "name": "Qdev-React-Boilerplate",
   "version": "0.0.1",
-  "description": "Qdev's React JS Boilerplate",
+  "description": "Qdev-React-Boilerplate",
   "engines": {
     "npm": ">=3"
   },

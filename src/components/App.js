@@ -11,7 +11,6 @@ class App extends Component {
   }
 
   render() {
-    const activeStyle = { color: 'blue' };
     return (
 
       <div>
@@ -22,13 +21,8 @@ class App extends Component {
           <div className="header item">
             React JS BoilerPlate
           </div>
-
             <Link className={this.props.history.location.pathname == '/' ? "item active" : "item"} to="/">Home</Link>
-            <Link className={this.props.history.location.pathname == '/example' ? "item active" : "item"} to="/example">Example</Link>
-            {/*<Link className={this.props.history.location.pathname == '/fuel-savings' ? "item active" : "item"} to="/fuel-savings">Demo App</Link>*/}
-            {/*<Link className={this.props.history.location.pathname == '/about' ? "item active" : "item"} to="/about" >About</Link>*/}
-            {/*<Link className={this.props.history.location.pathname == '/about' ? "item active" : "item"} to="/about" >Home 2</Link>*/}
-
+            <Link className={this.props.history.location.pathname == '/example' ? "item active" : "item"} to="/example">API Example</Link>
           </Container>
         </div>
 
@@ -49,7 +43,8 @@ class App extends Component {
 }
 
 App.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.element,
+  history : PropTypes.object,
 };
 
 export default App;

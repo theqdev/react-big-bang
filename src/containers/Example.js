@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import ExampleActions from '../Redux/Example'
-
+import PropTypes from 'prop-types'
 
 import { Link } from 'react-router-dom';
 
@@ -43,6 +43,12 @@ class Example extends Component {
 
 
 }
+
+
+Example.propTypes = {
+  getAPIData : PropTypes.function,
+};
+
 
 const mapStateToProps = (state) => {
   return {
