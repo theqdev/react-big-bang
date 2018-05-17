@@ -7,17 +7,13 @@ import AppNavigation from "../Navigation/Routes";
 class App extends Component {
 
   componentDidUpdate(){
-    console.log(this.props.history.location.pathname);
   }
 
   render() {
     return (
-
       <div>
-
         <div className="ui menu">
           <Container>
-
           <div className="header item">
             React JS BoilerPlate
           </div>
@@ -25,19 +21,10 @@ class App extends Component {
             <Link className={this.props.history.location.pathname == '/example' ? "item active" : "item"} to="/example">API Example</Link>
           </Container>
         </div>
-
         <Container >
-
         <AppNavigation/>
-
-
         </Container>
-
       </div>
-
-
-
-
     );
   }
 }

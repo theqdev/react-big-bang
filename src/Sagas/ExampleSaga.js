@@ -1,19 +1,19 @@
-import { takeLatest, put, call } from 'redux-saga/effects';
-import ExampleActions from "../Redux/Example";
+import { put, call } from 'redux-saga/effects';
+import PostsActions from "../Redux/Posts";
 
 export function * onExampleFetch(api, action) {
 
   const response = yield call(api.getExampleData, action.data)
 
   console.log(action.data);
-  console.log(response);
+  console.log(response.data);
 
   if (response.ok) {
     console.log('Profile succesfully updated');
-    yield put(ExampleActions.exampleSuccess())
+    yield put(PostsActions.postsSuccess(response.data))
   } else {
     console.log('Profile did not update. Backend might be down.');
-    yield put(ExampleActions.exampleFailure())
+    yield put(PostsActions.postsFailure())
   }
 
 }

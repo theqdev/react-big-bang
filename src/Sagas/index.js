@@ -6,31 +6,13 @@ import API from '../Services/Api'
 
 /* ------------- Types ------------- */
 
-import { ExampleActions } from '../Redux/Example'
-// import { UserActions } from '../Redux/UserRedux'
-// import { SettingsActions } from '../Redux/UserSettings'
-// import { ProfileActions } from '../Redux/UserProfile'
-// import { UsersActions } from '../Redux/UsersRedux'
-// import { MatchesActions } from '../Redux/MatchesRedux'
-// import { LocationActions } from '../Redux/LocationRedux'
-// import { ConversationActions } from '../Redux/UserMessages' // TODO: Add Redux to name
-// import { MessagesActions } from '../Redux/ChatRoomRedux'
-// import { UserReportActions } from '../Redux/UserReportRedux'
-// import {NotificationActions} from "../Redux/NotificationRedux";
+import {PostsActions} from '../Redux/Posts'
+
 
 /* ------------- Sagas ------------- */
 
 import { onExampleFetch } from './ExampleSaga'
-// import { onFetchRecords } from './UserSaga'
-// import { onSettingsSet } from './SettingsSaga'
-// import { onProfileUpdate } from './ProfileSaga'
-// import { onUsersFetch  } from './UsersSaga'
-// import { onActionSent  } from './MatchesSaga'
-// import { onLocationUpdate  } from './LocationSaga'
-// import { onConversationsFetch  } from './ConvesationsSaga'
-// import { onNewMessage, onMessagesFetched  } from './MessagesSaga'
-// import { onReportSent } from './UserReportSaga'
-// import { onDeviceTokenUpdate } from './NotificationSaga'
+
 
 /* ------------- API ------------- */
 
@@ -43,7 +25,7 @@ const api =  API.create()
 export default function * root () {
   yield all([
     // some sagas only receive an action
-    takeLatest(ExampleActions.EXAMPLE_SET, onExampleFetch, api),
+    takeLatest(PostsActions.POSTS_SET, onExampleFetch, api),
     //
     // takeLatest(UserActions.USER_REQUEST, onFetchRecords),
     // takeLatest(SettingsActions.SETTINGS_SET, onSettingsSet, api),

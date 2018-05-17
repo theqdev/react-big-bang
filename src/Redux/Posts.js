@@ -4,32 +4,36 @@ import Immutable from 'seamless-immutable'
 /* ------------- Types and Action Creators ------------- */
 
 const { Types, Creators } = createActions({
-  exampleSet: ['data'],
-  exampleSuccess: null,
-  exampleFailure: null,
+  postsGet: null,
+  postsSet: ['data'],
+  postsSuccess: ['data'],
+  postsFailure: null,
 })
 
-export const ExampleActions = Types
+export const PostsActions = Types
 export default Creators
 
 /* ------------- Initial State ------------- */
 
 export const INITIAL_STATE = Immutable({
-  test: 'kex',
+  data: null,
   fetching: null,
-  payload: null,
   error: null
 })
 
 /* ------------- Reducers ------------- */
 
 // request the data from an api
+export const get = (state, { data }) =>
+  state.merge({ fetching: true, data })
+
+// request the data from an api
 export const set = (state, { data }) =>
   state.merge({ fetching: true, data })
 
 // successful api lookup
-export const success = state =>
-  state.merge({ fetching: false, error: null })
+export const success = (state, { data }) =>
+  state.merge({ fetching: false, error: null, data:data })
 
 // Something went wrong somewhere.
 export const failure = state =>
@@ -37,8 +41,9 @@ export const failure = state =>
 
 /* ------------- Hookup Reducers To Types ------------- */
 
-export const example = createReducer(INITIAL_STATE, {
-  [Types.EXAMPLE_SET]: set,
-  [Types.EXAMPLE_SUCCESS]: success,
-  [Types.EXAMPLE_FAILURE]: failure,
+export const Posts = createReducer(INITIAL_STATE, {
+  [Types.POSTS_GET]: get,
+  [Types.POSTS_SET]: set,
+  [Types.POSTS_SUCCESS]: success,
+  [Types.POSTS_FAILURE]: failure,
 })

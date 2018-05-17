@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import ExampleActions from '../Redux/Example'
 import {Button, Dimmer, Grid, Image, Input, List, Loader, Rail, Segment} from 'semantic-ui-react'
 import { Icon } from 'semantic-ui-react'
-import { Link } from 'react-router-dom';
 
 class Home extends Component {
 
@@ -142,16 +139,4 @@ class Home extends Component {
 
 }
 
-const mapStateToProps = (state) => {
-  return {
-    data: state.example,
-  }
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    // updateUserSettings: (data) => dispatch(UserActions.userSuccess(data)),
-  }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default Home
