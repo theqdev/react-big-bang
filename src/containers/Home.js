@@ -5,21 +5,9 @@ import { Icon } from 'semantic-ui-react'
 class Home extends Component {
 
   componentDidMount(){
-
-    // alert(1);
-    console.log(this.props);
-    console.log(this.state);
-
   }
 
-
   componentDidUpdate(){
-
-    // alert(1);
-    console.log(this.props);
-    console.log(this.state);
-    // this.props.getAPIData();
-
   }
 
   render(){

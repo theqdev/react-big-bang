@@ -1,9 +1,8 @@
-// a library to wrap and simplify api calls
 import apisauce from 'apisauce'
-// import AppConfig from '../Config/AppConfig'
+import AppConfig from '../Config/AppConfig'
 
 // our "constructor"
-const create = (baseURL = /*AppConfig.APIServer*/  'https://jsonplaceholder.typicode.com') => {
+const create = (baseURL = AppConfig.APIServer ) => {
   // ------
   // STEP 1
   // ------
@@ -40,16 +39,8 @@ const create = (baseURL = /*AppConfig.APIServer*/  'https://jsonplaceholder.typi
   // way at this level.
   //
 
-  const getExampleData = (token) => api.get('posts', {token:token})
-  // const getMatches = (token) => api.get('users', {token:token})
-  //
-  // const getConversations = (token) => api.get('conversations', {token:token})
-  // const userAction = (token,data) => api.post('action', {data:data}, {headers: {Authorization: 'Bearer ' + token}})
+  const getPosts = (token) => api.get('posts', {token:token})
   // const setSettings = (token,data) => api.post(`settings`, {data:data}, {headers: {Authorization: 'Bearer ' + token}})
-  // const updateProfile = (token,data) => api.post(`profile`, {data:data}, {headers: {Authorization: 'Bearer ' + token}})
-  // const setLocation = (token,data) => api.post(`location/set`, {data:data}, {headers: {Authorization: 'Bearer ' + token}})
-  // const sendReport = (token,data) => api.post(`report`, {data:data}, {headers: {Authorization: 'Bearer ' + token}})
-  // const updateNotificationToken = (token,data) => api.post(`notification/updateToken`, {data:data}, {headers: {Authorization: 'Bearer ' + token}})
 
   // ------
   // STEP 3
@@ -65,15 +56,7 @@ const create = (baseURL = /*AppConfig.APIServer*/  'https://jsonplaceholder.typi
   //
   return {
     // a list of the API functions from step 2
-    getExampleData,
-    // getMatches,
-    // userAction,
-    // setSettings,
-    // updateProfile,
-    // setLocation,
-    // getConversations,
-    // sendReport,
-    // updateNotificationToken
+    getPosts,
   }
 }
 

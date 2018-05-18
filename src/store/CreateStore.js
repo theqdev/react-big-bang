@@ -1,5 +1,4 @@
 import { createStore, applyMiddleware, compose } from 'redux'
-// import Config from '../Config/DebugConfig'
 import createSagaMiddleware from 'redux-saga'
 
 import createHistory from 'history/createBrowserHistory';
@@ -22,7 +21,6 @@ export default (rootReducer, rootSaga) => {
   /* ------------- Assemble Middleware ------------- */
   enhancers.push(applyMiddleware(...middleware))
 
-  // if Reactotron is enabled (default for __DEV__), we'll create the Store through Reactotron
   const createAppropriateStore =  createStore
   const composeMethod = process.env.NODE_ENV === 'production' ? compose : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
   const store = createAppropriateStore(rootReducer, composeMethod(...enhancers))

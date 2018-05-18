@@ -7,24 +7,10 @@ import { Form, TextArea } from 'semantic-ui-react'
 class GetExample extends Component {
 
   componentDidMount(){
-    console.log(this.props.posts.data);
-
-    // Fetching the data into props from the API
     this.props.getAPIData();
-
-
-
   }
 
-
   componentDidUpdate(){
-    console.log(this.props.posts.data);
-
-    // Once API data is fetched, dispatching a post request
-    if(typeof this.props.posts.data !== 'undefined'){
-      // this.props.postAPIData('JWT Token');
-    }
-
   }
 
   render(){
@@ -56,8 +42,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getAPIData: (data) => dispatch(PostsActions.postsSet(data)),
-    postAPIData: (data) => dispatch(PostsActions.postsSet(data)),
+    getAPIData: (data) => dispatch(PostsActions.postsGet(data)),
   }
 };
 
