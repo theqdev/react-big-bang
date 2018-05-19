@@ -1,6 +1,6 @@
 import {Posts as posts} from './Posts';
 import { combineReducers } from 'redux'
-import configureStore from '../Stor/CreateStore'
+import configureStore from '../Store/CreateStore'
 import rootSaga from '../Sagas/index'
 
 export default () => {

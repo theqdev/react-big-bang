@@ -5,7 +5,7 @@ import createHistory from 'history/createBrowserHistory';
 export const history = createHistory();
 
 
-// creates the Stor
+// creates the Store
 export default (rootReducer, rootSaga) => {
   /* ------------- Redux Configuration ------------- */
 

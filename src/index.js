@@ -3,7 +3,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import { history } from './Stor/CreateStore';
+import { history } from './Store/CreateStore';
 import createStore from './Redux/index'
 
 
@@ -14,7 +14,7 @@ import Root from './Components/Root';
 import 'semantic-ui-css/semantic.min.css';
 import './Styles/styles.scss'; // Yep, that's right. You can import SASS/CSS files too! Webpack will run the associated loader and plug this into the page.
 require('./favicon.ico'); // Tell webpack to load favicon.ico
-// const Stor = configureStore();
+// const Store = configureStore();
 const store = createStore();
 
 render(
