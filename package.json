@@ -7,8 +7,6 @@
   },
   "scripts": {
     "setup": "node tools/setup/setupMessage.js && npm install && node tools/setup/setup.js",
-    "remove-demo": "babel-node tools/removeDemo.js",
-    "start-message": "babel-node tools/startMessage.js",
     "start": "concurrently -k -r -s first \"npm run open:src\" \"npm run lint:watch\"",
     "open:dev": "babel-node tools/srcServer.js",
     "open:build": "babel-node tools/distServer.js",
