@@ -8,6 +8,7 @@ class Home extends Component {
   }
 
   componentDidUpdate(){
+
   }
 
   render(){

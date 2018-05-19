@@ -1,4 +1,4 @@
-import {roundNumber} from '../Utils/math';
+import {roundNumber} from '../Util/math';
 
 describe('Math Helper', () => {
   describe('roundNumber', () => {
