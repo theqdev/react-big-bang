@@ -88,9 +88,9 @@ prompt.get([{name: 'deleteGit', description: "Delete the git repository?  [Y/n]"
 
       // remove all setup scripts from the 'tools' folder
       console.log(chalkSuccess('\nSetup complete! Cleaning up...\n'));
-      rimraf('./tools/setup', error => {
-        if (error) throw new Error(error);
-      });
+      // rimraf('./tools/setup', error => {
+      //   if (error) throw new Error(error);
+      // });
     });
 
   }
