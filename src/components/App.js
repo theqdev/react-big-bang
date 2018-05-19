@@ -15,7 +15,7 @@ class App extends Component {
         <div className="ui menu">
           <Container>
           <div className="header item">
-            React JS BoilerPlate
+            React Big BANG
           </div>
             <Link className={this.props.history.location.pathname == '/' ? "item active" : "item"} to="/">Home</Link>
             <Link className={this.props.history.location.pathname == '/example' ? "item active" : "item"} to="/example">API Example</Link>

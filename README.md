@@ -1,14 +1,24 @@
-A ready to go react js boilerplate, backed by latest tech trends.
+A ready to go React js boilerplate, backed by latest techs and tools to get your React projects on feet in no time.
 
 ### Getting started
 
-* `npm run setup` or `npm installl`
-* `npm start` or `npm run open:dev`
-* `npm run build`
+#### Installation and development mode
+
+* `npm run setup` or `npm install`
+* `npm start`
+
+
+#### Creating production build
+
+* `npm run prebuild` _Cleans build directory and runs Lint plus Tests_
+* `npm run build` _Generates production build_
+
+
+#### Linting and Tests
 * `npm lint` or `npm lint:watch`
 * `npm run test`
 
-## Technologies
+### Technologies
 
 Slingshot offers a rich development experience using the following technologies:
 
@@ -28,5 +38,7 @@ Slingshot offers a rich development experience using the following technologies:
 | [PostCSS](https://github.com/postcss/postcss) | Transform styles with JS plugins. Used to autoprefix CSS |
 | [Editor Config](http://editorconfig.org) | Enforce consistent editor settings (spaces vs tabs, etc). |) 
 | [npm Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build. |  
+
+_Note*_ Forked out of Corey's [react-slingshot](https://github.com/coryhouse/react-slingshot) boilerplate and inspired by Infinite Red's [ignite](https://github.com/infinitered/ignite) boilerplate for React Native.
 
 ---

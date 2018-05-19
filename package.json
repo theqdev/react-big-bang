@@ -1,13 +1,14 @@
 {
-  "name": "Qdev-React-Boilerplate",
+  "name": "React-Big-Bang",
   "version": "0.0.1",
-  "description": "Qdev-React-Boilerplate",
+  "description": "React-Big-Bang",
   "engines": {
     "npm": ">=3"
   },
   "scripts": {
     "setup": "node tools/setup/setupMessage.js && npm install && node tools/setup/setup.js",
     "start": "concurrently -k -r -s first \"npm run open:src\" \"npm run lint:watch\"",
+    "open:src": "babel-node tools/srcServer.js",
     "open:dev": "babel-node tools/srcServer.js",
     "open:build": "babel-node tools/distServer.js",
     "lint": "esw webpack.config.* src tools --color",
