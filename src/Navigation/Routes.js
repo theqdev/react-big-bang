@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import NotFoundPage from '../Component/NotFoundPage';
-import Home from '../Container/Home';
-import Posts from '../Container/Posts';
+import NotFoundPage from '../Components/NotFoundPage';
+import Home from '../Containers/Home';
+import Posts from '../Containers/Posts';
 import {Route, Switch} from "react-router-dom";
 
 

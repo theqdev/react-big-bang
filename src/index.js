@@ -8,7 +8,7 @@ import createStore from './Redux/index'
 
 
 
-import Root from './Component/Root';
+import Root from './Components/Root';
 
 // import 'semantic/dist/semantic.min.css';
 import 'semantic-ui-css/semantic.min.css';
@@ -26,7 +26,7 @@ render(
 
 if (module.hot) {
   module.hot.accept('./Components/Root', () => {
-    const NewRoot = require('./Component/Root').default;
+    const NewRoot = require('./Components/Root').default;
     render(
       <AppContainer>
         <NewRoot store={store} history={history} />
