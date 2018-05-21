@@ -1,3 +1,5 @@
+![React Big Bang Boilerplate](https://alkanyx.com/uploads/items/React%20Big%20Bang%20-%20React%20JS%20Boilerplate/previewImg/large.png)
+
 A ready to go React js boilerplate, backed by latest techs and tools to get your React projects on feet in no time. The boilerplate includes basic API call example and UI elements usage example.
 
 ### Getting started
