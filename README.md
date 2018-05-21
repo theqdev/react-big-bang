@@ -1,4 +1,4 @@
-A ready to go React js boilerplate, backed by latest techs and tools to get your React projects on feet in no time.
+A ready to go React js boilerplate, backed by latest techs and tools to get your React projects on feet in no time. The boilerplate includes basic API call example and UI elements usage example.
 
 ### Getting started
 
@@ -26,6 +26,7 @@ Slingshot offers a rich development experience using the following technologies:
 |----------|-------
 |  [React](https://facebook.github.io/react/)  |   Fast, composable client-side components.     |
 |  [Redux](http://redux.js.org) - [Redux Sauce](https://github.com/infinitered/reduxsauce) - [Redux Saga](https://github.com/redux-saga/redux-saga) | Clean and modern implementation of Redux. Enforces unidirectional data flows and immutable, hot reloadable store that supports time-travel debugging. | 
+|  [semnatic-ui-react](https://react.semantic-ui.com/introduction) | Semantic UI kit for React Js. Can be replaced with any library you wish | 
 |  [APISauce](https://github.com/infinitered/apisauce) | Axios Based API wrapper for mapping your app's backend. | 
 |  [React Router](https://github.com/reactjs/react-router) | A complete routing library for React |  
 |  [Babel](http://babeljs.io) |  Compiles ES6 to ES5. Enjoy the new version of JavaScript today.     | 
