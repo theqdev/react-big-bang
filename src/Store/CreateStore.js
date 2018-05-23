@@ -22,7 +22,7 @@ export default (rootReducer, rootSaga) => {
   enhancers.push(applyMiddleware(...middleware))
 
   const createAppropriateStore =  createStore
-  const composeMethod = process.env.NODE_ENV === 'production' ? compose : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+  const composeMethod = process.env.NODE_ENV === 'production' ? compose : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
   const store = createAppropriateStore(rootReducer, composeMethod(...enhancers))
 
   // kick off root saga
