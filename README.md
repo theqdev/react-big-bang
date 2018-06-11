@@ -2,6 +2,8 @@
 
 A ready to go React js boilerplate, backed by latest techs and tools to get your React projects on feet in no time. The boilerplate includes basic API call example and UI elements usage example.
 
+Check out our website at [Qdev](https://facebook.github.io/react/) and our code marketplace at [Alkanyx](https://facebook.github.io/react/) for more cool stuff.
+
 ### Getting started
 
 #### Installation and development mode
