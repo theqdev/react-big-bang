@@ -7,3 +7,36 @@ $vin-red: #ff0000;
 body {
 
 }
+
+p{
+  font-size: 16px;
+}
+
+.bigH{
+font-size:4em;
+}
+
+.bigP{
+  font-size:1.7em;
+}
+
+.footer{
+  height: 200px;
+  color:#FFF;
+  background-color:#1B1C1D;
+  padding:20px;
+  padding-top:40px;
+}
+
+.paddedContainer{
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.footer .social a{
+  color:#FFF
+}
+
+img{
+  z-index: -1;
+}

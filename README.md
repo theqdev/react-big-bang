@@ -4,6 +4,8 @@ A ready to go React js boilerplate, backed by latest techs and tools to get your
 
 Check out our website at [Qdev](https://facebook.github.io/react/) and our code marketplace at [Alkanyx](https://facebook.github.io/react/) for more cool stuff.
 
+You can also check out the official page of the boilerplate [Here](https://qdev.tech/react-big-bang/)
+
 ### Getting started
 
 #### Installation and development mode

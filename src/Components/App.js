@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { Container  } from 'semantic-ui-react'
 import AppNavigation from "../Navigation/Routes";
+import Footer from "./Footer";
+import MainMenu from "./MainMenu";
 
 class App extends Component {
 
@@ -11,19 +11,10 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <div className="ui menu">
-          <Container>
-          <div className="header item">
-            React Big BANG
-          </div>
-            <Link className={this.props.history.location.pathname == '/' ? "item active" : "item"} to="/">Home</Link>
-            <Link className={this.props.history.location.pathname == '/example' ? "item active" : "item"} to="/example">API Example</Link>
-          </Container>
-        </div>
-        <Container >
+      <div >
+        <MainMenu history={this.props.history}/>
         <AppNavigation/>
-        </Container>
+        <Footer/>
       </div>
     );
   }
