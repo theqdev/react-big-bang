@@ -3,12 +3,16 @@
 //
 
 .homeHeader{
-  height: 400px;
+  height: 360px;
   color:#FFF;
   background-color:#1B1C1D;
+  position:relative !important;
+  bottom:92px;
+  text-align: center;
 }
 
 .homeHero{
+  padding-top: 80px;
   margin-top:6%
 }
 
@@ -18,8 +22,9 @@
 }
 
 .homeContainer{
-  padding-top:40px;
-  //padding-bottom:40px
+  //padding-bottom:40px;
+
+
 }
 
 // Some nasty menu CSS overides
@@ -59,3 +64,49 @@ a.item:hover, .ui.link.inverted.menu .item:hover {
 .ui.inverted.menu .dropdown.item:hover, .ui.inverted.menu .link.item:hover, .ui.inverted.menu a.item:hover, .ui.link.inverted.menu .item:hover{
   color: rgba(255, 255, 255, 0.7) !important;
 }
+
+Form{
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align: center;
+
+}
+
+.start{
+  background-color: #6435c9!important;
+  min-width: 150px;
+}
+
+
+.col-img{
+  padding-left: 17%!important;
+
+}
+
+.col-text{
+  padding-left: 13%!important;
+}
+
+.container2{
+  margin-top:50px!important;
+  text-align: center;
+  border:1px solid#1B1C1D;
+
+}
+
+.ready{
+  border-right: 1px solid#1B1C1D;
+}
+
+.and{
+  text-align: center;
+  font-weight: bold;
+}
+
+.info{
+  margin-left: 16%!important;
+  margin-top:3%!important;
+  margin-bottom: 3%!important;
+}
+
+
