@@ -28,6 +28,8 @@ const MainMenu = (props) => {
           <Nav.Link to="/documentation" as={NavLink}>Documentation</Nav.Link>
           <Nav.Link to="/posts" as={NavLink}>API Example</Nav.Link>
         </Nav>
+        <Nav.Link href="https://alkanyx.com" target="_blank" className="alkanyx-btn">Alkanyx</Nav.Link>
+        <Nav.Link href="https://github.com/theqdev/react-big-bang" target="_blank" className="git-btn">Github</Nav.Link>
       </Navbar>
 
 

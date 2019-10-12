@@ -90,17 +90,12 @@ Form{
 .container2{
   margin-top:50px!important;
   text-align: center;
-  border:1px solid#1B1C1D;
+  border:1px solid#E8E8E8;
 
 }
 
 .ready{
-  border-right: 1px solid#1B1C1D;
-}
-
-.and{
-  text-align: center;
-  font-weight: bold;
+  border-right: 1px solid #E8E8E8;
 }
 
 .info{
@@ -108,5 +103,17 @@ Form{
   margin-top:3%!important;
   margin-bottom: 3%!important;
 }
+
+.ready{
+  padding-bottom: 2%;
+  padding-top: 1%;
+  padding-left: 6%;
+}
+
+.ready2{
+  padding-top: 1%;
+  padding-right: 6%;
+}
+
 
 

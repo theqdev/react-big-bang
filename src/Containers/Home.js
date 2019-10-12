@@ -65,7 +65,7 @@ class Home extends Component {
                   <p>Just clone the repo and you are ready to start coding.</p>
             </Col>
 
-            <Col>
+            <Col className="ready2">
                   <h1>Save time</h1>
                   <p>Skip the time and frustration of configuring a new React app.</p>
             </Col>
@@ -82,28 +82,28 @@ class Home extends Component {
                 <p>Out of the box ES6 configuration for both development and production builds.</p>
           </div>
 
-          <div className="and">AND</div>
+          <div className="ui horizontal divider">And</div>
 
           <div className="info">
                 <h1>Redux - Redux Sauce - Redux Sagas</h1>
                 <p>Quick and on point Redux workflow implementation that allows you to easily create reducers, actions, action creators and middleware to handle the data you need.</p>
           </div>
 
-          <div className="and">AND</div>
+          <div className="ui horizontal divider">And</div>
 
           <div className="info">
                 <h1 className="header">API Client Ready</h1>
                 <p>Map your backend API endpoints and you are ready to start fetching data from your API.</p>
           </div>
 
-          <div className="and">AND</div>
+          <div className="ui horizontal divider">And</div>
 
           <div className="info">
                 <h1 className="header">ESLint - Jest - Browsersync</h1>
                 <p>Do not let your code get out of control by using linting and tests. </p>
           </div>
 
-          <div className="and">AND</div>
+          <div className="ui horizontal divider">And</div>
 
           <div className="info">
                 <h1 className="header">Semantic UI - SASS - PostCSS</h1>
