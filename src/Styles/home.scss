@@ -6,63 +6,16 @@
   height: 360px;
   color:#FFF;
   background-color:#1B1C1D;
-  position:relative !important;
-  bottom:92px;
   text-align: center;
 }
 
 .homeHero{
-  padding-top: 80px;
-  margin-top:6%
+  padding-top: 50px;
 }
 
 .homeSubHero{
   vertical-align: middle;
   line-height: 400px;
-}
-
-.homeContainer{
-  //padding-bottom:40px;
-
-
-}
-
-// Some nasty menu CSS overides
-.homeNavBar{
-  z-index: 999999;
-  margin:0px!important;
-  border-radius: 0!important;
-  padding:10px;
-}
-
-.homeNavBarContainer{
-  background: #1B1C1D;
-}
-
-.ui.inverted.menu .active.item{
-  background: transparent;
-  border:none;
-  border-bottom:2px solid #FFF;
-}
-
-a.item:hover, .ui.link.inverted.menu .item:hover {
-  background: transparent!important;
-}
-
-.ui.inverted.menu .active.item {
-  background: transparent!important;
-}
-
-.ui.inverted.menu a.item:active {
-  background: transparent;
-}
-
-.ui.inverted.menu .item:before {
-  background: transparent!important;
-}
-
-.ui.inverted.menu .dropdown.item:hover, .ui.inverted.menu .link.item:hover, .ui.inverted.menu a.item:hover, .ui.link.inverted.menu .item:hover{
-  color: rgba(255, 255, 255, 0.7) !important;
 }
 
 Form{
@@ -78,20 +31,10 @@ Form{
 }
 
 
-.col-img{
-  padding-left: 17%!important;
-
-}
-
-.col-text{
-  padding-left: 13%!important;
-}
-
 .container2{
   margin-top:50px!important;
   text-align: center;
   border:1px solid#E8E8E8;
-
 }
 
 .ready{
