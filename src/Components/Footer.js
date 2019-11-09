@@ -2,12 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { FaFacebookSquare } from 'react-icons/fa';
-import { FaInstagram } from 'react-icons/fa';
-import { FaTwitter } from 'react-icons/fa';
-import { FaLinkedinIn } from 'react-icons/fa';
-
-
+import {Icon} from 'react-icons-kit'
+import {facebookSquare} from 'react-icons-kit/fa/facebookSquare'
+import {instagram} from 'react-icons-kit/fa/instagram'
+import {twitterSquare} from 'react-icons-kit/fa/twitterSquare'
+import {linkedinSquare} from 'react-icons-kit/fa/linkedinSquare'
 
 const Footer = () => {
   return (
@@ -33,10 +32,10 @@ const Footer = () => {
 
           <Col>
             <h4>Follow us on social media</h4>
-            <a href="https://www.facebook.com/qwebdev/" target="_blank"  rel="noopener noreferrer"><FaFacebookSquare className="icon" size={40}/></a>
-            <a href="https://twitter.com/Qwebdev" target="_blank"  rel="noopener noreferrer"><FaTwitter className="icon" size={40}/></a>
-            <a href="https://www.instagram.com/q.dev/" target="_blank"  rel="noopener noreferrer"><FaInstagram className="icon" size={40}/></a>
-            <a href="https://www.linkedin.com/company/qdev" target="_blank"  rel="noopener noreferrer"><FaLinkedinIn className="icon" size={40}/></a>
+            <a href="https://www.facebook.com/qwebdev/" target="_blank"  rel="noopener noreferrer"><Icon icon={facebookSquare} className="icon" size={40}/></a>
+            <a href="https://twitter.com/Qwebdev" target="_blank"  rel="noopener noreferrer"><Icon icon={instagram} className="icon" size={40}/></a>
+            <a href="https://www.instagram.com/q.dev/" target="_blank"  rel="noopener noreferrer"><Icon icon={twitterSquare} className="icon" size={40}/></a>
+            <a href="https://www.linkedin.com/company/qdev" target="_blank"  rel="noopener noreferrer"><Icon icon={linkedinSquare} className="icon" size={40}/></a>
           </Col>
 
       </Row>
