@@ -4,8 +4,6 @@ import PostsActions from '../Redux/Posts'
 import PropTypes from 'prop-types'
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
-import Jumbotron from "react-bootstrap/Jumbotron";
-
 
 class GetExample extends Component {
 
