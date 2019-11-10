@@ -16,17 +16,14 @@ class GetExample extends Component {
 
   render(){
     return(
-
       <div>
-
-        <Container className="paddedContainer">
-        <h1>API Get Example</h1>
-        <h3>Here is your data, served as props, after fetched from custom API endpoint.</h3>
+        <Container className="pt-4 pb-4">
+          <h1>API Get Example</h1>
+          <h3>Here is your data, served as props, after fetched from custom API endpoint.</h3>
           <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Control as="textarea" rows="3" value={typeof this.props.posts.data !== 'undefined' ? JSON.stringify(this.props.posts.data) : ''} autoHeight={true} />
           </Form.Group>
-      </Container>
-
+        </Container>
       </div>
     )
   }

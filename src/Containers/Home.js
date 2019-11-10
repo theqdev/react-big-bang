@@ -24,22 +24,22 @@ class Home extends Component {
             <h1 className="bigH">React big bang</h1>
             <p  className="bigP">The 💥  you need for your React projects.</p>
             <Link to="documentation">
-              <Button size="lg" className="start">Get started </Button>
+              <Button variant="info" size="lg" >Get started</Button>
             </Link>
           </div>
         </div>
 
         <Container>
-          <Row className="homeContainer pt-4 pt-4">
+          <Row className="homeContainer pt-4">
 
-            <Col className="col-text">
+            <Col lg={{span:6}} style={{paddingTop:'2rem'}}>
               <h1>About the boilerplate</h1>
               <p>React Big Bang is a solid foundation for React.js based apps, backed by latest techs and tools to get your React projects on feet in no time. The boilerplate includes basic API call example and UI elements usage example.</p>
               <p>Check out our website at <a href="https://qwebdev.eu/" target="_blank" rel="noopener noreferrer">Qdev</a> and our code marketplace at <a href="https://alkanyx.com/" target="_blank" rel="noopener noreferrer">Alkanyx</a> for more cool stuff.</p>
               <p>You can also checkout the <a href="https://github.com/theqdev/react-big-bang" target="_blank" rel="noopener noreferrer">Github</a> page.</p>
             </Col>
 
-            <Col className="col-img">
+            <Col lg={{span:6}} className="center">
               <img src="https://qwebdev.ro/rbb/react-big-bang.png" width={320}/>
             </Col>
 
@@ -47,21 +47,21 @@ class Home extends Component {
         </Container>
 
 
-        <Row className="container2">
+        <div className="d-flex mb-2 mt-4">
+          <Container className="pb-3 pt-3" style={{borderTop: '1px solid rgba(0, 0, 0, 0.1)',borderBottom: '1px solid rgba(0, 0, 0, 0.1)'}}>
+            <Row>
+              <Col className="col-lg-6 center">
+                <h1>Ready to go</h1>
+                <p>Just clone the repo and you are ready to start coding.</p>
+              </Col>
 
-          <Col className="ready">
-            <h1>Ready to go</h1>
-            <p>Just clone the repo and you are ready to start coding.</p>
-          </Col>
-
-          <Col className="ready2">
-            <h1>Save time</h1>
-            <p>Skip the time and frustration of configuring a new React app.</p>
-          </Col>
-
-        </Row>
-
-
+              <Col className="col-lg-6 center">
+                <h1>Save time</h1>
+                <p>Skip the time and frustration of configuring a new React app.</p>
+              </Col>
+            </Row>
+          </Container>
+        </div>
 
 
         <Container className="text" style={{marginTop:'40px',marginBottom:'40px'}}>

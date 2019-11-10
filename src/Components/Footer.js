@@ -7,41 +7,41 @@ import {facebookSquare} from 'react-icons-kit/fa/facebookSquare'
 import {instagram} from 'react-icons-kit/fa/instagram'
 import {twitterSquare} from 'react-icons-kit/fa/twitterSquare'
 import {linkedinSquare} from 'react-icons-kit/fa/linkedinSquare'
+import {Container} from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <div>
-    <div className="footer ui inverted">
-      <Row>
+      <div className="footer ui inverted">
+        <Container>
+          <Row>
 
-          <Col className="about">
-            <h4>About</h4>
-            <p>React Big Bang - Ready to go React.js starter kit. </p>
-            <p>Made with love by <a href="https://qwebdev.eu/" target="_blank"  rel="noopener noreferrer">Qdev Techs</a> © 2018.</p>
-          </Col>
+            <Col col={{span:4}}>
+              <h4>About</h4>
+              <p>React Big Bang - Ready to go React.js starter kit. </p>
+              <p>Made with ♥ by <a href="https://qwebdev.eu/" target="_blank"  rel="noopener noreferrer">Qdev Techs</a> © {new Date().getFullYear()}.</p>
+            </Col>
 
-          <Col>
-            <h4>Services</h4>
-            <ul>
-              <li><Link to="home">Home</Link></li>
-              <li><Link  to="documentation">Documentation</Link></li>
-              <li><Link  to="example">API Example</Link></li>
-            </ul>
+            <Col col={{span:4}}>
+              <h4>Services</h4>
+              <ul>
+                <li><Link to="home">Home</Link></li>
+                <li><Link  to="documentation">Documentation</Link></li>
+                <li><Link  to="example">API Example</Link></li>
+              </ul>
+            </Col>
 
-          </Col>
+            <Col col={{span:4}}>
+              <h4>Follow / Reach us</h4>
+              <a href="https://www.facebook.com/qwebdev/" target="_blank"  rel="noopener noreferrer"><Icon icon={facebookSquare} className="footer-social-icon" size="2rem"/></a>
+              <a href="https://twitter.com/Qwebdev" target="_blank"  rel="noopener noreferrer"><Icon icon={instagram} className="footer-social-icon" size="2rem"/></a>
+              <a href="https://www.instagram.com/q.dev/" target="_blank"  rel="noopener noreferrer"><Icon icon={twitterSquare} className="footer-social-icon" size="2rem"/></a>
+              <a href="https://www.linkedin.com/company/qdev" target="_blank"  rel="noopener noreferrer"><Icon icon={linkedinSquare} className="footer-social-icon" size="2rem"/></a>
+            </Col>
 
-          <Col>
-            <h4>Follow us on social media</h4>
-            <a href="https://www.facebook.com/qwebdev/" target="_blank"  rel="noopener noreferrer"><Icon icon={facebookSquare} className="icon" size={40}/></a>
-            <a href="https://twitter.com/Qwebdev" target="_blank"  rel="noopener noreferrer"><Icon icon={instagram} className="icon" size={40}/></a>
-            <a href="https://www.instagram.com/q.dev/" target="_blank"  rel="noopener noreferrer"><Icon icon={twitterSquare} className="icon" size={40}/></a>
-            <a href="https://www.linkedin.com/company/qdev" target="_blank"  rel="noopener noreferrer"><Icon icon={linkedinSquare} className="icon" size={40}/></a>
-          </Col>
+          </Row>
+        </Container>
 
-      </Row>
-
-    </div>
-    </div>
+      </div>
   );
 };
 
