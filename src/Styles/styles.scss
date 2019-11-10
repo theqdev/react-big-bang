@@ -3,25 +3,12 @@ $vin-blue: #5bb7db;
 $vin-green: #60b044;
 $vin-red: #ff0000;
 
-.btn{
-  border-color:transparent!important;
-}
-
 /* Styles */
-body {
-
-}
-
-p{
-  font-size: 16px;
-}
-
-.bigH{
-font-size:4em;
-}
-
-.bigP{
-  font-size:1.7em;
+.navbar{
+  background-color:#1B1C1D !important;
+  max-height: 500px !important ;
+  height: 93px !important;
+  font-size: 20px;
 }
 
 .footer{
@@ -32,67 +19,16 @@ font-size:4em;
   padding-top:40px;
 }
 
-.paddedContainer{
-  padding-top:20px;
-  padding-bottom:20px;
-}
-
 .footer .social a{
   color:#FFF
 }
 
-img{
-  z-index: -1;
-}
-
-
-//css scris de mine pentru bootstrap
-
-.navbar{
-  background-color:#1B1C1D !important;
-  max-height: 500px !important ;
-  height: 93px !important;
-  font-size: 20px;
-
-}
-
-.mr-auto.navbar-nav{
-
-margin-left: 13.5% !important;
-
-}
-
-.about{
-  margin-left: 12.5% !important;
-}
-
-.text{
-  max-width: 60%;
-}
-
-.icon{
+.footer-social-icon{
   color: white;
   padding-left: 7px;
   padding-right: 7px;
 }
 
-.git-btn{
-  margin-left: 1%;
-  margin-right: 20%;
-  color: #FFFFFF;
-  border:3px solid#5bb7db;
-  border-radius: 5px;
-  background: #5bb7db;
-  padding-left: 1.4%;
-  padding-right: 1.4%;
+.center{
+  text-align: center;
 }
-
-.alkanyx-btn{
-  color: #60b044;
-  border:3px solid#60b044;
-  border-radius: 5px;
-  padding-right: 1%;
-  padding-right: 1%;
-}
-
-
