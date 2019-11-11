@@ -16,14 +16,13 @@ class Docs extends Component {
     return(
       <div>
 
-        <Container className="paddedContainer" size="sm">
+        <Container className="pt-4 pb-4" size="sm">
 
           <h1>Documentation</h1>
 
           <h3>Overview</h3>
 
-          <Button variant="warning" size="sm">IN Development</Button>
-
+          <p>React Big Bang is a solid foundation for React.js based apps, backed by latest techs and tools to get your React projects on feet in no time. The boilerplate includes basic API call example and UI elements usage example.</p>
 
           <h3>Table of contents:</h3>
           <ul>
