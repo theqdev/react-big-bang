@@ -1,33 +1,43 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {Button, Container, Icon, Menu} from "semantic-ui-react";
-
+import {NavLink} from 'react-router-dom';
+import '../Styles/styles.scss';
 import PropTypes from 'prop-types';
+import {Button, Container, Nav, Navbar} from "react-bootstrap";
+import { Icon } from 'react-icons-kit'
+import {github} from 'react-icons-kit/fa/github'
 
-const MainMenu = (props) => {
-
+const MainMenu = () => {
   return (
-    <div className="homeNavBarContainer">
+
+    <Navbar bg="dark" variant="dark" expand="lg" className="header">
       <Container>
-        <Menu size='huge' inverted className="homeNavBar">
-          <Link className={props.history.location.pathname == '/' || props.history.location.pathname == '/home'  ? "item active" : "item"} to="/home">Home</Link>
-          <Link className={props.history.location.pathname == '/documentation' ? "item active" : "item"} to="documentation">Documentation</Link>
-          <Link className={props.history.location.pathname == '/example' ? "item active" : "item"} to="example">API Example</Link>
-          <Menu.Menu position='right'>
-            <Menu.Item>
-              <a href="https://alkanyx.com/" target="_blank"  rel="noopener noreferrer">
-                <Button inverted color='green' style={{display:'inline-block'}} size='large'>Alkanyx</Button>
-              </a>
-            </Menu.Item>
-            <Menu.Item>
-              <a href="https://github.com/theqdev/react-big-bang" target="_blank"  rel="noopener noreferrer">
-                <Button inverted color='blue' size='large'><Icon name="github"></Icon>Github</Button>
-              </a>
-            </Menu.Item>
-          </Menu.Menu>
-        </Menu>
+
+        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+
+        <Navbar.Collapse className="justify-content-start">
+        <Nav>
+          <Nav.Link to="/home" as={NavLink}>Home</Nav.Link>
+          <Nav.Link to="/documentation" as={NavLink}>Documentation</Nav.Link>
+          <Nav.Link to="/posts" as={NavLink}>API Example</Nav.Link>
+        </Nav>
+        </Navbar.Collapse>
+
+        <Navbar.Collapse className="justify-content-end">
+          <Nav>
+            <Nav.Item className="mr-2">
+              <a href="https://taskcamp.net" rel="noopener noreferrer" target="_blank"><Button variant="outline-primary">Taskcamp</Button></a>
+            </Nav.Item>
+            <Nav.Item className="mr-2">
+              <a href="https://alkanyx.com" rel="noopener noreferrer" target="_blank"><Button variant="outline-success">Alkanyx</Button></a>
+            </Nav.Item>
+            <Nav.Item>
+              <a href="https://github.com/theqdev/react-big-bang" rel="noopener noreferrer" target="_blank"><Button variant="outline-light"><Icon icon={github} size="1.3em" style={{marginTop:'-3px'}}/> Github</Button></a>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
+
       </Container>
-    </div>
+    </Navbar>
   );
 };
 

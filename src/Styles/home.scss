@@ -1,15 +1,14 @@
-//
 // Homepage related CSS
-//
 
 .homeHeader{
-  height: 400px;
+  height: 360px;
   color:#FFF;
   background-color:#1B1C1D;
+  text-align: center;
 }
 
 .homeHero{
-  margin-top:6%
+  padding-top: 50px;
 }
 
 .homeSubHero{
@@ -17,45 +16,8 @@
   line-height: 400px;
 }
 
-.homeContainer{
-  padding-top:40px;
-  //padding-bottom:40px
-}
-
-// Some nasty menu CSS overides
-.homeNavBar{
-  z-index: 999999;
-  margin:0px!important;
-  border-radius: 0!important;
-  padding:10px;
-}
-
-.homeNavBarContainer{
-  background: #1B1C1D;
-}
-
-.ui.inverted.menu .active.item{
-  background: transparent;
-  border:none;
-  border-bottom:2px solid #FFF;
-}
-
-a.item:hover, .ui.link.inverted.menu .item:hover {
-  background: transparent!important;
-}
-
-.ui.inverted.menu .active.item {
-  background: transparent!important;
-}
-
-.ui.inverted.menu a.item:active {
-  background: transparent;
-}
-
-.ui.inverted.menu .item:before {
-  background: transparent!important;
-}
-
-.ui.inverted.menu .dropdown.item:hover, .ui.inverted.menu .link.item:hover, .ui.inverted.menu a.item:hover, .ui.link.inverted.menu .item:hover{
-  color: rgba(255, 255, 255, 0.7) !important;
+.info{
+  margin-left: 16%!important;
+  margin-top:3%!important;
+  margin-bottom: 3%!important;
 }

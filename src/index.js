@@ -9,7 +9,6 @@ import createStore from './Redux/index'
 import Root from './Components/Root';
 
 import './Styles/styles.scss'; // Yep, that's right. You can import SASS/CSS files too! Webpack will run the associated loader and plug this into the page.
-import 'semantic-ui-css/semantic.min.css';
 
 require('./favicon.png'); // Tell webpack to load favicon.ico
 

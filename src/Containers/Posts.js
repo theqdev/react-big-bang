@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PostsActions from '../Redux/Posts'
 import PropTypes from 'prop-types'
-import {Container, Form, TextArea} from 'semantic-ui-react'
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
 
 class GetExample extends Component {
 
@@ -15,13 +16,15 @@ class GetExample extends Component {
 
   render(){
     return(
-      <Container className="paddedContainer">
-        <h1>API Get Example</h1>
-        <h3>Here is youd data, served as props, after fetched from custom API endpoint.</h3>
-        <Form >
-          <TextArea placeholder='Tell us more' value={typeof this.props.posts.data !== 'undefined' ? JSON.stringify(this.props.posts.data) : ''} autoHeight={true}/>
-        </Form>
-      </Container>
+      <div>
+        <Container className="pt-4 pb-4">
+          <h1>API Get Example</h1>
+          <p>Here is your data, served as props to your container, after fetched from custom API endpoint.</p>
+          <Form.Group controlId="exampleForm.ControlTextarea1">
+            <Form.Control as="textarea" rows="20" value={typeof this.props.posts.data !== 'undefined' ? JSON.stringify(this.props.posts.data) : ''} onChange={()=>{}}/>
+          </Form.Group>
+        </Container>
+      </div>
     )
   }
 

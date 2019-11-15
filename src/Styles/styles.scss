@@ -4,20 +4,11 @@ $vin-green: #60b044;
 $vin-red: #ff0000;
 
 /* Styles */
-body {
-
-}
-
-p{
-  font-size: 16px;
-}
-
-.bigH{
-font-size:4em;
-}
-
-.bigP{
-  font-size:1.7em;
+.navbar{
+  background-color:#1B1C1D !important;
+  max-height: 500px !important ;
+  height: 93px !important;
+  font-size: 20px;
 }
 
 .footer{
@@ -28,15 +19,40 @@ font-size:4em;
   padding-top:40px;
 }
 
-.paddedContainer{
-  padding-top:20px;
-  padding-bottom:20px;
-}
-
 .footer .social a{
   color:#FFF
 }
 
-img{
-  z-index: -1;
+.footer-social-icon{
+  color: white;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.center{
+  text-align: center;
+}
+
+pre code {
+  line-height: 1.6em;
+  font-size: 13px;
+}
+pre {
+  padding: 0.1em 0.5em 0.3em 0.7em;
+  border-left: 11px solid #ccc;
+  margin: 1.7em 0 1.7em 0.3em;
+  overflow: auto;
+  width: 93%;
+}
+/* target IE7 and IE6 */
+*:first-child+html pre {
+  padding-bottom: 2em;
+  overflow-y: hidden;
+  overflow: visible;
+  overflow-x: auto;
+}
+* html pre {
+  padding-bottom: 2em;
+  overflow: visible;
+  overflow-x: auto;
 }
