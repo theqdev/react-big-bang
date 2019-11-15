@@ -18,7 +18,7 @@ const Footer = () => {
             <Col col={{span:4}}>
               <h4>About</h4>
               <p>React Big Bang - Ready to go React.js starter kit. </p>
-              <p>Made with ♥ by <a href="https://qwebdev.eu/" target="_blank"  rel="noopener noreferrer">Qdev Techs</a> © {new Date().getFullYear()}.</p>
+              <p>Made with <span style={{color:'red'}}>♥</span> by <a href="https://qwebdev.eu/" target="_blank"  rel="noopener noreferrer">Qdev Techs</a> © {new Date().getFullYear()}.</p>
             </Col>
 
             <Col col={{span:4}}>

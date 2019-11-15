@@ -64,7 +64,6 @@ class Home extends Component {
 
           <div className="info">
             <h1>Webpack - Babel - Router</h1>
-            <h4>Webpack - Babel - Router</h4>
             <p>Out of the box ES6 configuration for both development and production builds.</p>
           </div>
 
@@ -124,8 +123,8 @@ class Home extends Component {
           </div>
 
           <div className="info">
-            <h1 className="header">Semantic UI - SASS - PostCSS</h1>
-            <p>Start building your UI quickly with Semantic UI kit and modern CSS.</p>
+            <h1 className="header">React Bootstrap - SCSS - PostCSS</h1>
+            <p>Start building your UI quickly with React Boostrap UI kit and modern CSS.</p>
           </div>
 
         </Container>

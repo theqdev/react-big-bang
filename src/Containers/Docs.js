@@ -83,7 +83,7 @@ class Docs extends Component {
             </ul>
           </div>
 
-          <p>The documentation is lightweight so I hope that the code and the examples will be the ones that are self explanatory. If you got any suggestions or questions, don't hesitate to send us an email at <a href="mailto:contact@qwebdev.net">contact@qwebdev.net</a>.</p>
+          <p>The documentation is lightweight so I hope that the code and the examples will be the ones that are self explanatory. If you got any suggestions or questions, don{"'"}t hesitate to send us an email at <a href="mailto:contact@qwebdev.net">contact@qwebdev.net</a>.</p>
 
         </Container>
 
