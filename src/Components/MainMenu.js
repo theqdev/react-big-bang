@@ -14,7 +14,7 @@ const MainMenu = () => {
 
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
 
-        <Navbar.Collapse className="justify-content-start" activeKey="/home">
+        <Navbar.Collapse className="justify-content-start">
         <Nav>
           <Nav.Link to="/home" as={NavLink}>Home</Nav.Link>
           <Nav.Link to="/documentation" as={NavLink}>Documentation</Nav.Link>
