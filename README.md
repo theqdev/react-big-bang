@@ -2,7 +2,6 @@
 
 A ready to go React js boilerplate, backed by latest techs and tools to get your React projects on feet in no time. The boilerplate includes basic API call example and UI elements usage example.
 
-Check out our website at [Qdev](https://facebook.github.io/react/) and our code marketplace at [Alkanyx](https://facebook.github.io/react/) for more cool stuff.
 
 You can also check out the official page of the boilerplate [Here](https://rbb.qdev.tech)
 
@@ -32,7 +31,7 @@ Slingshot offers a rich development experience using the following technologies:
 |----------|-------
 |  [React](https://facebook.github.io/react/)  |   Fast, composable client-side components.     |
 |  [Redux](http://redux.js.org) - [Redux Sauce](https://github.com/infinitered/reduxsauce) - [Redux Saga](https://github.com/redux-saga/redux-saga) | Clean and modern implementation of Redux. Enforces unidirectional data flows and immutable, hot reloadable store that supports time-travel debugging. | 
-|  [semnatic-ui-react](https://react.semantic-ui.com/introduction) | Semantic UI kit for React Js. Can be replaced with any library you wish | 
+|  [react-bootstrap](https://react-bootstrap.github.io/) | React Bootstrap UI kit for React Js. | 
 |  [APISauce](https://github.com/infinitered/apisauce) | Axios Based API wrapper for mapping your app's backend. | 
 |  [React Router](https://github.com/reactjs/react-router) | A complete routing library for React |  
 |  [Babel](http://babeljs.io) |  Compiles ES6 to ES5. Enjoy the new version of JavaScript today.     | 
@@ -46,6 +45,7 @@ Slingshot offers a rich development experience using the following technologies:
 | [Editor Config](http://editorconfig.org) | Enforce consistent editor settings (spaces vs tabs, etc). |) 
 | [npm Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build. |  
 
-_Note*_ Forked out of Corey's [react-slingshot](https://github.com/coryhouse/react-slingshot) boilerplate and inspired by Infinite Red's [ignite](https://github.com/infinitered/ignite) boilerplate for React Native.
 
 ---
+
+Check out our website at [Qdev](https://facebook.github.io/react/) and our code marketplace at [Alkanyx](https://facebook.github.io/react/) for more cool stuff.
