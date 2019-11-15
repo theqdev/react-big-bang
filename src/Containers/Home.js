@@ -6,6 +6,8 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import {Image} from "react-bootstrap";
+import Images from "../Styles/Images"
 
 class Home extends Component {
 
@@ -38,7 +40,7 @@ class Home extends Component {
               <p>You can also checkout the <a href="https://github.com/theqdev/react-big-bang" target="_blank" rel="noopener noreferrer">Github</a> page.</p>
             </Col>
             <Col lg={{span:6}} className="center">
-              <img src="https://qwebdev.ro/rbb/react-big-bang.png" width={320}/>
+              <Image src={Images.logo} width={320}/>
             </Col>
           </Row>
         </Container>

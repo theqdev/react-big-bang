@@ -46,12 +46,10 @@ class Docs extends Component {
             <p>Then, in your component, you will be able to access your parameter by using <code>this.props.match.params.id</code>. </p>
           </div>
 
-
           <div id="components">
             <h3>Components</h3>
             <p>Components are split between the <code>Containers</code> and <code>Components</code> folders. As their name suggests, in the <i>Containers</i> one, you can store your smart components, and main container components for your pages, which are also usually connected to the redux store. Then for the dumb/presentation components, you can use the <i>Components</i> folder.</p>
           </div>
-
 
           <div id="redux">
             <h3>Redux - Sagas - API</h3>
@@ -66,7 +64,6 @@ class Docs extends Component {
             </ol>
             <p>I would recommend that at first, just to copy over the existing examples and turn adapt them your needs.</p>.
           </div>
-
 
           <div id="styling">
             <h3>UI & CSS</h3>
