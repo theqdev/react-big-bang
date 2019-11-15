@@ -21,7 +21,7 @@ class GetExample extends Component {
           <h1>API Get Example</h1>
           <h3>Here is your data, served as props, after fetched from custom API endpoint.</h3>
           <Form.Group controlId="exampleForm.ControlTextarea1">
-            <Form.Control as="textarea" rows="3" value={typeof this.props.posts.data !== 'undefined' ? JSON.stringify(this.props.posts.data) : ''} autoHeight={true} />
+            <Form.Control as="textarea" rows="20" value={typeof this.props.posts.data !== 'undefined' ? JSON.stringify(this.props.posts.data) : ''} onChange={()=>{}}/>
           </Form.Group>
         </Container>
       </div>

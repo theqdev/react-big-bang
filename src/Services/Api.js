@@ -15,10 +15,7 @@ const create = (baseURL = AppConfig.APIServer ) => {
     // here are some default headers
     headers: {
       'Cache-Control': 'no-cache',
-      "Accept-Encoding": "gzip, deflate",
       "Accept": "application/json",
-
-
     },
     // 10 second timeout...
     timeout: 10000
