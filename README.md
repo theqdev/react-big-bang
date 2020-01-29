@@ -15,8 +15,10 @@ You can also check out the official page of the boilerplate [Here](https://rbb.q
 
 #### Creating production build
 
+* `npm run clean-dist` _Cleans build directory_
 * `npm run prebuild` _Cleans build directory and runs Lint plus Tests_
 * `npm run build` _Generates production build_
+* `npm run analyze-bundle` _Analyze bundle size and it's libraries_
 
 
 #### Linting and Tests
