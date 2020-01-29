@@ -81,7 +81,7 @@
     "json-loader": "0.5.4",
     "mockdate": "2.0.1",
     "node": "8.9.4",
-    "node-sass": "4.12.0",
+    "node-sass": "4.13.1",
     "opn-cli": "3.1.0",
     "postcss-loader": "2.0.6",
     "prompt": "1.0.0",
