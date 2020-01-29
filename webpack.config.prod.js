@@ -56,7 +56,15 @@ export default {
     }),
 
     // Minify JS
-    new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      comments: false,
+      compress: {
+        warnings: false,
+        drop_console: true
+      },
+    }),
+    
   ],
   module: {
     rules: [
