@@ -1,9 +1,5 @@
 <img src="http://qwebdev.ro/media/rbb/thumb.png" data-canonical-src="http://qwebdev.ro/media/rbb/thumb.png" width="100%" />
 A ready to go React js boilerplate, backed by latest techs and tools to get your React projects on feet in no time. The boilerplate includes basic API call example and UI elements usage example.
-<br>
-<br>
-<img src="http://qwebdev.ro/media/rbb/details.png" data-canonical-src="http://qwebdev.ro/media/rbb/details.png" width="100%" />
-
 
 ### Getting started
 You can also check out the official page of the boilerplate [Here](https://rbb.qdev.tech).
