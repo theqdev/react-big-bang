@@ -1,4 +1,5 @@
-![React Big Bang Boilerplate](https://qwebdev.ro/rbb/rbb.png)
+![React Big Bang Boilerplate](http://qwebdev.ro/media/rbb/thumb.png)
+![React Big Bang Boilerplate](http://qwebdev.ro/media/rbb/details.png)
 
 A ready to go React js boilerplate, backed by latest techs and tools to get your React projects on feet in no time. The boilerplate includes basic API call example and UI elements usage example.
 
@@ -50,4 +51,4 @@ Slingshot offers a rich development experience using the following technologies:
 
 ---
 
-Check out our website at [Qdev](https://facebook.github.io/react/) and our code marketplace at [Alkanyx](https://facebook.github.io/react/) for more cool stuff.
+Check out our website at [Qdev](https://qdev.tech) and our code marketplace at [Alkanyx](https://alkanyx.com) for more cool stuff.
