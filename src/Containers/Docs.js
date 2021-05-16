@@ -20,6 +20,15 @@ class Docs extends Component {
           <h3>Overview</h3>
           <p>React Big Bang is a solid foundation for React.js based apps, backed by latest techs and tools to get your React projects on feet in no time. The boilerplate includes basic API call example and UI elements usage example.</p>
 
+          <h3>Installation</h3>
+          <p>To get start run the following commands</p>
+
+          <ul>
+          <li><code>git clone https://github.com/theqdev/react-big-bang</code></li>
+          <li><code>npm run setup</code> or <code>npm install</code></li>
+          <li><code>npm start</code></li>
+          </ul>
+
           <h3>Table of contents:</h3>
           <ul>
             <li><a href="#routing">Routing</a></li>

@@ -6,6 +6,7 @@ You can also check out the official page of the boilerplate [Here](https://rbb.q
 
 #### Installation and development mode
 
+* `git clone https://github.com/theqdev/react-big-bang`
 * `npm run setup` or `npm install`
 * `npm start`
 
