@@ -29,7 +29,7 @@
   "author": "Qdev Techs",
   "license": "MIT",
   "dependencies": {
-    "apisauce": "1.1.1",
+    "apisauce": "2.1.1",
     "axios": "0.21.1",
     "bootstrap": "4.3.1",
     "object-assign": "4.1.0",
