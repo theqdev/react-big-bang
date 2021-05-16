@@ -22,7 +22,7 @@ const Footer = () => {
             </Col>
 
             <Col col={{span:4}}>
-              <h4>Services</h4>
+              <h4>Links</h4>
               <ul>
                 <li><Link to="home">Home</Link></li>
                 <li><Link  to="documentation">Documentation</Link></li>
