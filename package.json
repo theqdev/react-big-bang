@@ -30,7 +30,7 @@
   "license": "MIT",
   "dependencies": {
     "apisauce": "2.1.1",
-    "axios": "0.21.1",
+    "axios": "0.25.0",
     "bootstrap": "4.3.1",
     "object-assign": "4.1.0",
     "react": "16.8.6",
