@@ -135,16 +135,16 @@ class Home extends Component {
                 <p className="">Here are a few sites that got built partially or entirely on the boilerplate</p>
               </div>
               <div className="d-flex align-items-center justify-content-center mt-4">
-                <a href="https://alkanyx.com" target="_blank">
+                <a href="https://alkanyx.com" target="_blank" rel="noopener noreferrer">
                   <Image src={Images.alkanyx_logo} className="mx-3 mb-2 grayscale" height={64}/>
                 </a>
-                <a href="https://illustation.io" target="_blank">
+                <a href="https://illustation.io" target="_blank" rel="noopener noreferrer">
                   <Image src={Images.illustation_logo} className="mx-3 mb-2 grayscale" height={64}/>
                 </a>
-                <a href="https://taskcamp.net" target="_blank">
+                <a href="https://taskcamp.net" target="_blank" rel="noopener noreferrer">
                   <Image src={Images.taskcamp_logo} className="mx-3 mb-2 grayscale" height={64}/>
                 </a>
-                <a href="https://firewoks.ro" target="_blank">
+                <a href="https://firewoks.ro" target="_blank" rel="noopener noreferrer">
                   <Image src={Images.firewoks_logo} className="mx-3 mb-2 grayscale" height={64}/>
                 </a>
               </div>
