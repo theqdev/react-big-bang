@@ -128,9 +128,8 @@ class Home extends Component {
           </div>
 
           <hr />
-          <Row className="pt-5 pb-2 w-100">
+          <Row className="pt-4 pb-2 w-100">
             <Col lg={{span:12}}>
-
               <div className="d-flex align-items-center justify-content-center flex-column">
                 <h2 className="font-weight-bold">Built with React big bang</h2>
                 <p className="">Here are a few sites that got built partially or entirely on the boilerplate</p>
