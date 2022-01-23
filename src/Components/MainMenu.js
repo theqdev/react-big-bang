@@ -24,12 +24,6 @@ const MainMenu = () => {
 
         <Navbar.Collapse className="justify-content-end">
           <Nav>
-            <Nav.Item className="mr-2">
-              <a href="https://taskcamp.net" rel="noopener noreferrer" target="_blank"><Button variant="outline-primary">Taskcamp</Button></a>
-            </Nav.Item>
-            <Nav.Item className="mr-2">
-              <a href="https://alkanyx.com" rel="noopener noreferrer" target="_blank"><Button variant="outline-success">Alkanyx</Button></a>
-            </Nav.Item>
             <Nav.Item>
               <a href="https://github.com/theqdev/react-big-bang" rel="noopener noreferrer" target="_blank"><Button variant="outline-light"><Icon icon={github} size="1.3em" style={{marginTop:'-3px'}}/> Github</Button></a>
             </Nav.Item>
