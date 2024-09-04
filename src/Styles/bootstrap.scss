@@ -1,0 +1,17 @@
+/* Variables */
+$primary:       #7695FF !default;
+$secondary:     #ffa07a !default;
+$light:         #ffffff !default;
+$dark:          #333333 !default;
+$info:          #17a2b8 !default;
+$success:       #28a745 !default;
+$warning:       #ffc107 !default;
+$danger:        #dc3545 !default;
+
+/* make the customizations */
+//$theme-colors: (
+//  'info': tomato,
+//  'danger': teal
+//);
+
+@import '~bootstrap/scss/bootstrap';

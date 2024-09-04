@@ -1,14 +1,35 @@
 {
   "env": {
-    "browser": true
+    "browser": true,
+    "node": true,
+    "es6": true
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended"
   ],
   "rules": {
-      "no-console": 0,
-      "no-undef":0
+    "no-console": 0,
+    "no-undef": 0
+  },
+  "overrides": [
+    {
+      "files": ["src/index.js"],
+      "rules": {
+        "react/no-deprecated": "off"
+      }
     }
+  ],
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-env", "@babel/preset-react"]
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }

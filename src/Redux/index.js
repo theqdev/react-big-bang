@@ -1,14 +1,9 @@
-import {Posts as posts} from './Posts';
-import { combineReducers } from 'redux'
-import configureStore from '../Store/CreateStore'
-import rootSaga from '../Sagas/index'
-import 'bootstrap/dist/css/bootstrap.css';
+import { combineReducers } from 'redux';
+import { connectRouter } from 'connected-react-router';
+import { Posts as posts } from './Posts';
 
-export default () => {
-  /* ------------- Assemble The Reducers ------------- */
-  const rootReducer = combineReducers({
-    posts:posts,
-  })
-
-  return configureStore(rootReducer, rootSaga)
-}
+export const createRootReducer = (history) =>
+  combineReducers({
+    router: connectRouter(history), // Integrates the router state into Redux
+    posts, // Your other reducers
+  });
