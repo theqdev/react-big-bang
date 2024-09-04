@@ -1,40 +1,37 @@
-import { createStore, applyMiddleware, compose } from 'redux'
-import createSagaMiddleware from 'redux-saga'
+import { createStore, applyMiddleware, compose } from 'redux';
+import createSagaMiddleware from 'redux-saga';
+import { routerMiddleware } from 'connected-react-router';
+import { createBrowserHistory } from 'history';
+import { createRootReducer } from '../Redux';
+import rootSaga from '../Sagas/index';
 
-import createHistory from 'history/createBrowserHistory';
-export const history = createHistory();
+export const history = createBrowserHistory();
 
+export default function configureStore(preloadedState) {
+  const sagaMiddleware = createSagaMiddleware();
+  const routingMiddleware = routerMiddleware(history);
 
-// creates the Store
-export default (rootReducer, rootSaga) => {
-  /* ------------- Redux Configuration ------------- */
+  const middleware = [sagaMiddleware, routingMiddleware];
 
-  const middleware = []
-  const enhancers = []
+  const composeEnhancers =
+    process.env.NODE_ENV !== 'production' &&
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+      ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+      : compose;
 
+  const store = createStore(
+    createRootReducer(history), // root reducer with router state
+    preloadedState, // initial state
+    composeEnhancers(applyMiddleware(...middleware))
+  );
 
-  /* ------------- Saga Middleware ------------- */
-  const sagaMonitor =  null
-  const sagaMiddleware = createSagaMiddleware({ sagaMonitor })
-  middleware.push(sagaMiddleware)
-
-  /* ------------- Assemble Middleware ------------- */
-  enhancers.push(applyMiddleware(...middleware))
-
-  const createAppropriateStore =  createStore
-  const composeMethod = process.env.NODE_ENV === 'production' ? compose : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-  const store = createAppropriateStore(rootReducer, composeMethod(...enhancers))
-
-  // kick off root saga
-  sagaMiddleware.run(rootSaga)
+  sagaMiddleware.run(rootSaga);
 
   if (module.hot) {
-    // Enable Webpack hot module replacement for reducers
     module.hot.accept('../Redux', () => {
-      const nextReducer = require('../Redux/index').default; // eslint-disable-line global-require
-      store.replaceReducer(nextReducer);
+      store.replaceReducer(createRootReducer(history));
     });
   }
 
-  return store
+  return store;
 }

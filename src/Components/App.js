@@ -5,15 +5,13 @@ import Footer from "./Footer";
 import MainMenu from "./MainMenu";
 
 class App extends Component {
-
-  componentDidUpdate(){
-  }
-
   render() {
     return (
-      <div >
+      <div className="d-flex flex-column h-100">
         <MainMenu history={this.props.history}/>
-        <AppNavigation/>
+        <div className="flex-fill">
+          <AppNavigation/>
+        </div>
         <Footer/>
       </div>
     );

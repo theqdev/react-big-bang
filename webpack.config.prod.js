@@ -1,42 +1,35 @@
-// For info about this file refer to webpack and webpack-hot-middleware documentation
-// For info on how we're generating bundles with hashed filenames for cache busting: https://medium.com/@okonetchnikov/long-term-caching-of-static-assets-with-webpack-1ecb139adb95#.w99i89nsz
 import webpack from 'webpack';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import WebpackMd5Hash from 'webpack-md5-hash';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 
 const GLOBALS = {
   'process.env.NODE_ENV': JSON.stringify('production'),
-  __DEV__: false
+  __DEV__: false,
 };
 
 export default {
+  mode: 'production',
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json'], // Automatically resolve these extensions
   },
-  devtool: 'source-map', // more info:https://webpack.js.org/guides/production/#source-mapping and https://webpack.js.org/configuration/devtool/
+  devtool: 'source-map', // Generate source maps for better debugging in production
   entry: path.resolve(__dirname, 'src/index'),
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[contenthash].js', // Use contenthash for better caching
+    clean: true, // Clean the output directory before emit
   },
   plugins: [
-    // Hash the files using MD5 so that their names change when the content changes.
-    new WebpackMd5Hash(),
-
-    // Tells React to build in prod mode. https://facebook.github.io/react/downloads.html
     new webpack.DefinePlugin(GLOBALS),
-
-    // Generate an external css file with a hash in the filename
-    new ExtractTextPlugin('[name].[contenthash].css'),
-
-    // Generate HTML file that contains references to generated bundles. See here for how this works: https://github.com/ampedandwired/html-webpack-plugin#basic-usage
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css', // Use contenthash for CSS as well
+    }),
     new HtmlWebpackPlugin({
       template: 'src/index.ejs',
-      favicon: 'src/favicon.png',
+      favicon: 'src/Images/favicon.png',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -47,121 +40,88 @@ export default {
         keepClosingSlash: true,
         minifyJS: true,
         minifyCSS: true,
-        minifyURLs: true
+        minifyURLs: true,
       },
       inject: true,
-      // Note that you can add custom options here if you need to handle other custom logic in index.html
-      // To track JavaScript errors via TrackJS, sign up for a free trial at TrackJS.com and enter your token below.
-      trackJSToken: ''
     }),
-
-    // Minify JS
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      comments: false,
-      compress: {
-        warnings: false,
-        drop_console: true
-      },
-    }),
-    
+    new webpack.optimize.AggressiveMergingPlugin(), // Optimize chunk merging
   ],
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: ['babel-loader'], // Use babel-loader to transpile JS/JSX files
       },
       {
         test: /\.eot(\?v=\d+.\d+.\d+)?$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              name: '[name].[ext]'
-            }
-          }
-        ]
+        type: 'asset/resource', // Handle eot files as resources
+        generator: {
+          filename: 'fonts/[name].[contenthash][ext]',
+        },
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 10000,
-              mimetype: 'application/font-woff',
-              name: '[name].[ext]'
-            }
-          }
-        ]
+        type: 'asset/resource', // Handle woff files as resources
+        generator: {
+          filename: 'fonts/[name].[contenthash][ext]',
+        },
       },
       {
         test: /\.[ot]tf(\?v=\d+.\d+.\d+)?$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 10000,
-              mimetype: 'application/octet-stream',
-              name: '[name].[ext]'
-            }
-          }
-        ]
+        type: 'asset/resource', // Handle ttf files as resources
+        generator: {
+          filename: 'fonts/[name].[contenthash][ext]',
+        },
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 10000,
-              mimetype: 'image/svg+xml',
-              name: '[name].[ext]'
-            }
-          }
-        ]
+        type: 'asset/resource', // Handle svg files as resources
+        generator: {
+          filename: 'images/[name].[contenthash][ext]',
+        },
       },
       {
         test: /\.(jpe?g|png|gif|ico)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]'
-            }
-          }
-        ]
+        type: 'asset/resource', // Handle image files as resources
+        generator: {
+          filename: 'images/[name].[contenthash][ext]',
+        },
       },
       {
         test: /(\.css|\.scss|\.sass)$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                minimize: true,
-                sourceMap: true
-              }
-            }, {
-              loader: 'postcss-loader',
-              options: {
-                plugins: () => [
-                  require('autoprefixer')
+        use: [
+          MiniCssExtractPlugin.loader, // Extract CSS into separate files
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 2,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  require('autoprefixer')(), // Automatically add vendor prefixes
                 ],
-                sourceMap: true
-              }
-            }, {
-              loader: 'sass-loader',
-              options: {
+              },
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('sass'), // Use Dart Sass instead of node-sass
+              sassOptions: {
                 includePaths: [path.resolve(__dirname, 'src', 'scss')],
-                sourceMap: true
-              }
-            }
-          ]
-        })
-      }
-    ]
-  }
+              },
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
 };

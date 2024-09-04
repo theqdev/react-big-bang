@@ -1,34 +1,32 @@
-/* eslint-disable import/default */
-
 import React from 'react';
-import { render } from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'connected-react-router';
 import { history } from './Store/CreateStore';
-import createStore from './Redux/index'
-
+import configureStore from './Store/CreateStore';
 import Root from './Components/Root';
+import './Styles/app.scss';
+require('./favicon.png');
 
-import './Styles/styles.scss'; // Yep, that's right. You can import SASS/CSS files too! Webpack will run the associated loader and plug this into the page.
+const store = configureStore();
 
-require('./favicon.png'); // Tell webpack to load favicon.ico
+const renderApp = (Component) => {
+  ReactDOM.render(
+    <Provider store={store}>
+      <ConnectedRouter history={history}>
+        {/*TOOD: Review this*/}
+        <Component store={store} history={history} /> {/* Pass history and store */}
+      </ConnectedRouter>
+    </Provider>,
+    document.getElementById('app')
+  );
+};
 
-const store = createStore();
-
-render(
-  <AppContainer>
-    <Root store={store} history={history} />
-  </AppContainer>,
-  document.getElementById('app')
-);
+renderApp(Root);
 
 if (module.hot) {
   module.hot.accept('./Components/Root', () => {
     const NewRoot = require('./Components/Root').default;
-    render(
-      <AppContainer>
-        <NewRoot store={store} history={history} />
-      </AppContainer>,
-      document.getElementById('app')
-    );
+    renderApp(NewRoot);
   });
 }

@@ -1,12 +1,9 @@
-/* Variables */
-$vin-blue: #5bb7db;
-$vin-green: #60b044;
-$vin-red: #ff0000;
+@import 'bootstrap.scss';
 
 /* Styles */
 .navbar{
   background-color:#1B1C1D !important;
-  max-height: 500px !important ;
+  max-height: 500px !important;
   height: 93px !important;
   font-size: 20px;
 }
@@ -65,4 +62,8 @@ pre {
 .grayscale:hover {
   filter: none;
   -webkit-filter: grayscale(0%);
+}
+
+.navbar{
+  height: 60px!important;
 }
